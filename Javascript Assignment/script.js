@@ -203,7 +203,7 @@ const create_list = ()=>{
     let temp = true
     let tempArray = []
     while(temp){
-        let tempItem = prompt('Enter the things that you want to enter in array leave empty to exit!');
+        let tempItem = prompt('Enter the things that you want to enter in list leave empty to exit!');
         if(tempItem == ""){
             temp =  false 
         }else{
@@ -213,12 +213,26 @@ const create_list = ()=>{
     return tempArray
 }
 
-console.log(create_list())
+// console.log(create_list())
 
+// Question no 21:
+// They think of something you could store in a JavaScript Object. Write a program that creates Objects containing these items.
+const create_object = ()=>{
+    let temp = true
+    let tempObj = []
+    while(temp){
+        let tempItem = prompt('Enter the things that you want to enter in array object empty to exit!');
+        if(tempItem == ""){
+            temp =  false 
+        }else{
+            obj = {"name" : tempItem}
+            tempObj.push(obj)
+            // tempObj = {...tempObj, ... obj}
+        }
+    }
+    return tempObj
+}
 
-
-
-
-
+console.log(create_object())
 
 
