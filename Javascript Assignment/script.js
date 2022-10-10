@@ -408,6 +408,7 @@ if(favorite_fruits.includes(fruit.toLowerCase())){
 
 let usernames = ["Jawwad", "Rafique", "Ahmed", "ALi", "Shehroz", "Admin" ]
 
+
 usernames.map((item ,index)=>{
     if(item.toLowerCase() == "admin"){
         console.log(`Hello ${item}, would you like to see a status report?`)
@@ -415,3 +416,62 @@ usernames.map((item ,index)=>{
         console.log(`Hello ${item}, thank you for logging in again.`)
     }
 })
+
+// Question : 31
+//No Users: 
+
+usernames = [];
+
+if(usernames.length <= 0){
+    console.log("We need to find some users!");
+}
+
+// Question : 32
+// Checking Usernames:
+
+let current_users = ["jawwad", "rafique", "ahmed", "ali", "shehroz", "hamza" ]
+
+let new_user = ["Jawwad", "Rafique", "Muzammil", "Salman", "Zaheer"]
+
+new_user.map((item , index)=>{
+    if(current_users.includes(item.toLowerCase)){
+        console.log(`"${item}" this user name already exist please enter new user name!`)
+    }else{
+        console.log(`"${item}" is available!`)
+    }
+})
+
+// Question : 33
+// Ordinal Numbers:
+let ordinal_numbers = [1,2,3,4,5,6,7,8,9]
+
+ordinal_numbers.map((item, index)=>{
+    if(item === 1){
+        console.log(item+"st")
+    }else if(item === 2){
+        console.log(item+"nd")
+    }else if(item === 3){
+        console.log(item+"rd")
+    }else{
+        console.log(item+"th")
+    }
+})
+
+// Question : 34
+// Ordinal Numbers:
+let pizzas = ["Pepperoni", "Margherita", "Veggie" ]
+
+for( let i = 0; i<pizzas.length ; i++){
+    console.log(`I like ${ pizzas[i] } pizza.`)
+}
+console.log(`I like pepperoni pizza.`)
+
+// Question : 35
+// Animals:
+
+let animal = ["dog", "cat", "elephat"]
+
+animal.map((item, index)=>{
+    console.log(`${item[0].toUpperCase() + item.slice(1).toLowerCase() } have four legs`)
+})
+console.log(`${animal[1][0].toUpperCase() + animal[1].slice(1).toLowerCase() } would make a great pet!`)
