@@ -475,3 +475,77 @@ animal.map((item, index)=>{
     console.log(`${item[0].toUpperCase() + item.slice(1).toLowerCase() } have four legs`)
 })
 console.log(`${animal[1][0].toUpperCase() + animal[1].slice(1).toLowerCase() } would make a great pet!`)
+
+// Question : 36
+// T-Shirt:
+
+function make_shirt(size , message ){
+    console.log(`The ${size} is ${message}`)
+}
+
+make_shirt("Xl", "out of stock")
+
+function make_shirt(size , message ){
+    console.log(`The ${size} is ${message}`)
+}
+
+// Question : 37
+// T-Shirt:
+
+function large_shirt(size = "Large" , message="to lose"){
+    console.log(`The ${size} is ${message}`)
+}
+large_shirt()
+
+
+// Question : 38
+// Cities:
+
+function describe_city(city , country = "Paksitan"){
+    console.log(`The ${city} is in ${country}`)
+}
+
+describe_city("Karachi")
+describe_city("Lahore")
+describe_city("Delhi","India")
+
+// Question : 39
+// City Names:
+function city_country(city , country){
+    return `${city} , ${country}`;
+}
+
+console.log(city_country("Karachi", "Paksitan"))
+console.log(city_country("Dubai", "UAE"))
+console.log(city_country("Islamabad", "Paksitan"))
+
+// Question : 40
+// Album:
+
+function make_album(artist_name , album_title){
+    return {
+        "Artist Name" : artist_name,
+        "Album Title" : album_title
+    }
+}
+
+
+// Question : 41
+// Magicians:
+
+let magicians = ["Apollo", "Blaine" , "Copperfield"];
+function show_magicians(tempArr , message ="Magician Name:"){
+    tempArr.map((item, index)=>{
+        console.log(`${message} ${item} `)
+    })
+}
+show_magicians(magicians);
+
+
+// Question : 42
+// Great Magicians:
+
+function make_great(){
+    show_magicians(magicians , "Great");
+}
+make_great()
