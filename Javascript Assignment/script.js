@@ -170,23 +170,17 @@ for(let i = guest_list.length ; i>0 ;i--){
 // Seeing the World: Think of at least five places in the world you’d like to visit.
 
 var places = ['Macca', 'Madina', 'Turkey', 'Bhagdad'];
-
-console.log(places);
-
-
-// Sorting missind
-// console.log(places.sort(function(a, b){
-//     return a.firstname === b.firstname ? 0 : a.firstname < b.firstname ? -1 : 1;
-// }));
-
-
-console.log(places);
-// Reserver Algorithm
-
-console.log(places.reverse());
-console.log(places.reverse());
-console.log(places.sort());
-console.log(places.reverse());
+console.log('\n\n')
+console.log(`Original array => ${places}`)
+console.log(`Sort array without changing original array => ${places.slice().sort()}`)
+console.log(`Original array => ${places}`)
+console.log(`Reverse array without changing original array => ${places.slice().reverse()}`)
+console.log(`Original array => ${places}`)
+console.log(`Now order has changed array => ${places.reverse()}`)
+console.log(`Now array change in original array => ${places.reverse()}`)
+console.log(`Sort by changing order => ${places.sort()}`)
+console.log(`Sort in descending order => ${places.reverse()}`)
+console.log('\n\n')
 
 // Question no 19:
 // Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
@@ -199,40 +193,225 @@ guest_list.map((item , index) =>{
 // Question no 20:
 // Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items.
 
-const create_list = ()=>{
-    let temp = true
-    let tempArray = []
-    while(temp){
-        let tempItem = prompt('Enter the things that you want to enter in list leave empty to exit!');
-        if(tempItem == ""){
-            temp =  false 
-        }else{
-            tempArray.push(tempItem)
-        }
-    }
-    return tempArray
-}
+// const create_list = ()=>{
+//     let temp = true
+//     let tempArray = []
+//     while(temp){
+//         let tempItem = prompt('Enter the things that you want to enter in list leave empty to exit!');
+//         if(tempItem == ""){
+//             temp =  false 
+//         }else{
+//             tempArray.push(tempItem)
+//         }
+//     }
+//     return tempArray
+// }
 
 // console.log(create_list())
 
 // Question no 21:
 // They think of something you could store in a JavaScript Object. Write a program that creates Objects containing these items.
-const create_object = ()=>{
-    let temp = true
-    let tempObj = []
-    while(temp){
-        let tempItem = prompt('Enter the things that you want to enter in array object empty to exit!');
-        if(tempItem == ""){
-            temp =  false 
-        }else{
-            obj = {"name" : tempItem}
-            tempObj.push(obj)
-            // tempObj = {...tempObj, ... obj}
-        }
+// const create_object = ()=>{
+//     let temp = true
+//     let tempObj = []
+//     while(temp){
+//         // remove comment
+//         // let tempItem = prompt('Enter the things that you want to enter in array object empty to exit!');
+//         if(tempItem == ""){
+//             temp =  false 
+//         }else{
+//             obj = {"name" : tempItem}
+//             tempObj.push(obj)
+//             // tempObj = {...tempObj, ... obj}
+//         }
+//     }
+//     return tempObj
+// }
+
+// console.log(create_object())
+
+// Question no 22:
+// Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program.
+
+let tempArr = ["0","1","2","3","4","5","6","7"]
+
+for(let i = 0; i<=tempArr.length ; i++){
+    if(tempArr[i] == undefined){
+        console.log("This index is not avaiable")
+    }else{
+        console.log(tempArr[i])
     }
-    return tempObj
 }
 
-console.log(create_object())
+
+// Question no 23:
+// Conditional Tests: Write a series of conditional tests.
+
+let car ='audi'
+console.log(car === "audi" ? "i predict True" : "i predict False");
+console.log(car === "BMW" ? "i predict True" : "i predict False");
+console.log(car.toLowerCase() === "Audi".toLowerCase() ? "i predict True" : "i predict False");
+console.log(car === "Audi" ? "i predict True" : "i predict False");
+
+let opt = 5+5
+console.log(opt === "10" ? "i predict True" : "i predict False");
+console.log(opt === 10 ? "i predict True" : "i predict False");
+console.log(opt == ('12'-'2') ? "i predict True" : "i predict False");
+console.log(opt === ('12'-'1') ? "i predict True" : "i predict False");
+
+console.log(typeof(opt) === "number" ? "i predict True": "i predict False");
+console.log(typeof(opt) === "string" ? "i predict True": "i predict False");
 
 
+// Question no 24:
+// More Conditional Tests:.
+
+let num = 10
+let myName1 = "jawwad rafique"
+console.log(num == '10')
+console.log(num === '10')
+console.log(myName1 === 'jawwad rafique')
+console.log(myName1 === 'Jawwad Rafique')
+
+let percentage  = 55
+
+if(percentage >= 80){
+    console.log("Grade : A+")
+}else if(percentage >= 70){
+    console.log("Grade : A")
+}else if(percentage >= 60){
+    console.log("Grade : B")
+}else if(percentage >= 55){
+    console.log("Grade : C")
+}else if(percentage >= 50){
+    console.log("Grade : D")
+}else{
+    console.log("Grade : Fail")
+}
+
+let gender_req = "male"
+let max_age = 19
+let gender = "";
+let cur_age =0;
+// Remove promt comment
+// let cur_age = Number(prompt("Inter your age?"))
+// let gender = (prompt("Your gender?"))
+
+if(gender.toLowerCase() == gender_req && cur_age <= max_age){
+    console.log("You are eligible for under 19 Male Cricket team")
+}else{
+    console.log("You are not eligible for under 19 Male Cricket team")
+}
+max_age = 18
+if((gender.toLowerCase() == "male" || gender.toLowerCase() == "female") && cur_age >=18){
+    console.log("You are not eligible for CNIC")
+}
+
+let myFavFruits = ["apple", "mango", "banana"];
+
+let yourFavFruit = ""//prompt("What is your favourite fruit?");
+console.log(myFavFruits.includes(yourFavFruit.toLocaleLowerCase()) ? "Congratulation we both love "+yourFavFruit : "Sorry i don't like " + yourFavFruit)
+
+// Question : 25
+// Alien Colors #1: Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+
+let alien_color = "green";
+// let guess_alien_color = prompt("Guess Alien color").toLowerCase()
+
+if(alien_color.toLowerCase() === "green"){
+    console.log("You earned 5 points")
+}
+
+if(alien_color.toLowerCase() !== "green"){
+    
+}
+
+
+// Question : 26
+// Alien Colors #2:
+
+if(alien_color.toLowerCase() === "green"){
+    console.log("You earned 5 points")
+}else{
+    console.log("You earned 10 points")
+}
+
+alien_color = "red"
+if(alien_color.toLowerCase() === "green"){
+    console.log("You earned 5 points")
+}else{
+    console.log("You earned 10 points")
+}
+
+// Question : 27
+// Alien Colors #3:
+alien_color = ["green","yellow","red"]
+
+for(let i = 0 ; i < alien_color.length ; i++){
+
+    if(alien_color[i].toLowerCase() == "green"){
+        console.log("You earned 5 points")
+    }else if(alien_color[i].toLowerCase() == "yellow"){
+        console.log("You earned 10 points")
+    }else if(alien_color[i].toLowerCase() == "red"){
+        console.log("You earned 15 points")
+    }
+}
+
+// Question : 28
+// Stages of Life
+ age = 66
+
+ if(age >= 0 && age <= 2){
+    console.log("The person is a baby.")
+ }else if(age > 2 && age <= 4){
+    console.log("The person is a toddler.")
+ }else if(age > 4 && age <= 13){
+    console.log("The person is a kid.")
+ }else if(age > 13 && age <= 20){
+    console.log("The person is a teenager.")
+ }
+ else if(age > 20 && age <= 65){
+    console.log("The person is an adult.")
+ }else if( age > 65){
+    console.log("The person is an elder.")
+ }
+
+
+// Question : 29
+//Favorite Fruit:
+
+let favorite_fruits = ["apple", "banana", "mango", "graph"]
+let fruit = 'Banana';
+if(favorite_fruits.includes(fruit.toLowerCase())){
+    console.log('You really like '+ fruit +" ?")
+}
+fruit = 'apple';
+if(favorite_fruits.includes(fruit.toLowerCase())){
+    console.log('You really like '+ fruit +" ?")
+}
+fruit = 'mango';
+if(favorite_fruits.includes(fruit.toLowerCase())){
+    console.log('You really like '+ fruit +" ?")
+}
+fruit = 'peach';
+if(favorite_fruits.includes(fruit.toLowerCase())){
+    console.log('You really like '+ fruit +" ?")
+}
+fruit = 'graph';
+if(favorite_fruits.includes(fruit.toLowerCase())){
+    console.log('You really like '+ fruit +" ?")
+}
+
+// Question : 30
+//Hello Admin: 
+
+let usernames = ["Jawwad", "Rafique", "Ahmed", "ALi", "Shehroz", "Admin" ]
+
+usernames.map((item ,index)=>{
+    if(item.toLowerCase() == "admin"){
+        console.log(`Hello ${item}, would you like to see a status report?`)
+    }else{
+        console.log(`Hello ${item}, thank you for logging in again.`)
+    }
+})
