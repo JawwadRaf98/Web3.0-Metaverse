@@ -522,12 +522,32 @@ console.log(city_country("Islamabad", "Paksitan"))
 // Question : 40
 // Album:
 
-function make_album(artist_name , album_title){
-    return {
+function make_album(artist_name , album_title, no_of_tracks = ""){
+    
+    return no_of_tracks === "" ? {
         "Artist Name" : artist_name,
         "Album Title" : album_title
-    }
+    } : {
+        "Artist Name" : artist_name,
+        "Album Title" : album_title,
+        "No of Track" : no_of_tracks
+    } 
 }
+let tempArr1 = [make_album("Fawad", "Kashmir Band"), make_album("Hamza", "Jonoon"), make_album("Talha", "Khana badosh")]
+tempArr1.map((item, index)=>{
+    item['No of Track'] !== undefined ? 
+    console.log("Artist : ", item['Artist Name'], "\tAlbum Title : ", item['Album Title'], "\tNo of Track : "+ item['No of Track'])
+    :
+    console.log("Artist : ", item['Artist Name'], "\tAlbum Title : ", item['Album Title'])
+})
+tempArr1.push(make_album("Talha Younus", "AK47", 10))
+
+tempArr1.map((item, index)=>{
+    item['No of Track'] !== undefined ? 
+    console.log("Artist : ", item['Artist Name'], "\tAlbum Title : ", item['Album Title'], "\tNo of Track : "+ item['No of Track'])
+    :
+    console.log("Artist : ", item['Artist Name'], "\tAlbum Title : ", item['Album Title'])
+})
 
 
 // Question : 41
@@ -549,3 +569,52 @@ function make_great(){
     show_magicians(magicians , "Great");
 }
 make_great()
+
+
+// Question : 43
+// Unchanged Magicians:
+let copy_magicians = magicians.slice();
+let tempMagArr = []
+function make_great2(item){
+    return [item]
+}
+
+copy_magicians.map((item, key)=>{
+    tempMagArr.push(make_great2(item))
+})
+
+tempMagArr.map((item, index)=>{
+    show_magicians(item, "Great:")
+})
+
+
+// Question : 44
+// Sandwiches:
+
+const  sandwiches = (tempArr , collection) =>{
+
+    for(let i = 0 ; i<collection ; i++){
+        console.log(`i order ${tempArr[i]} `)
+    }
+
+}
+sandwiches(["Biryani", "Club Sandwich"],2)
+sandwiches(["Tikka", "Haleem", "Pizza"],3)
+sandwiches(["Kheer", "Cold-drink", "Club Sandwich"],3)
+
+// Question : 45
+// Cars:
+
+function cars(manufacturer, model , ...rest){
+    let tempArr ={
+        "Manufacturer" : manufacturer,
+        "Modal" : model,
+            }
+    rest.map((item, index)=>{
+        console.log(item)
+        Object.assign(tempArr, item)
+    })
+    return (tempArr)
+}
+console.log(cars("Alto", 2001))
+console.log(cars("Civic", 2004, {"Color": "Black", "Rim":"New"}))
